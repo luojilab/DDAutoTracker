@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:id="@+id/main_content"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:fitsSystemWindows="true"
+                                                 tools:context="com.example.liushuo.ddautopointer.activity.TabDemoActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="tab1"
+            android:text="tab 1"/>
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="tab2"
+            android:text="tab 2"/>
+    </android.support.design.widget.TabLayout>
+
+</android.support.design.widget.CoordinatorLayout>
