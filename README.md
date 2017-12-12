@@ -43,8 +43,4 @@ AutoPointHelper.ignoreLayoutData
 ## 关于埋点配置
 主项目assets目录下需要放置da.cfg配置文件，这个文件与从服务器下载的配置文件相同，作为默认埋点配置。
 
-##开发规范的检查已经通过lint项目保证
-
-    
-    
-# DDAutoPointer
+## 开发规范的检查已经通过lint项目保证
