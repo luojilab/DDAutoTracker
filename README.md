@@ -34,13 +34,13 @@ AutoPointHelper.configLayoutData (id 和数据的对应关系)
 AutoPointHelper.ignoreLayoutData
 或实现DataAdapter 配置view绑定的数据 (View 实例和数据的对应关系,特别适用于用自定义ViewGroup,通过addView实现list效果的写法)，那么该View下的任意子View点击操作打点日志绑定的数据都是该数据。
 
-##关于布局文件
+## 关于布局文件
 布局文件中控件id不能有重复，任意控件id不能和文件名相同，同一个layout.xml中，不同include的布局中不能包含相同id的控件。
 
-##自定义ViewGroup说明
+## 自定义ViewGroup说明
 对于需要绑定数据的自定义ViewGroup,请务必实现DataAdapter 接口，并实现数据绑定方法setData及数据获取方法getData。打点框架会自动获取该自定义布局绑定的数据。
 
-##关于埋点配置
+## 关于埋点配置
 主项目assets目录下需要放置da.cfg配置文件，这个文件与从服务器下载的配置文件相同，作为默认埋点配置。
 
 ##开发规范的检查已经通过lint项目保证
