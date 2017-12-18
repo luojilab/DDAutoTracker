@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.liushuo.ddautopointer">
+          package="com.example.liushuo.ddautotracker">
 
     <application
-        android:name=".DemoApp"
+        android:name="com.example.liushuo.ddautotracker.DemoApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ListDemoActivity">
+        <activity android:name="com.example.liushuo.ddautotracker.activity.ListDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.GridViewDemoActivity">
+        <activity android:name="com.example.liushuo.ddautotracker.activity.GridViewDemoActivity">
         </activity>
-        <activity android:name=".activity.RecyclerViewDemoActivity">
+        <activity android:name="com.example.liushuo.ddautotracker.activity.RecyclerViewDemoActivity">
         </activity>
-        <activity android:name=".activity.ViewPagerDemoActivity">
+        <activity android:name="com.example.liushuo.ddautotracker.activity.ViewPagerDemoActivity">
         </activity>
-        <activity android:name=".activity.TabDemoActivity">
+        <activity android:name="com.example.liushuo.ddautotracker.activity.TabDemoActivity">
         </activity>
     </application>
 

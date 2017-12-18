@@ -1,4 +1,4 @@
-package com.example.liushuo.ddautopointer.activity;
+package com.example.liushuo.ddautotracker.activity;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -11,13 +11,13 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.liushuo.ddautopointer.Bean.CategoryBean;
-import com.example.liushuo.ddautopointer.R;
-import com.example.liushuo.ddautopointer.adapter.CategoryAdapter;
+import com.example.liushuo.ddautotracker.Bean.CategoryBean;
+import com.example.liushuo.ddautotracker.R;
+import com.example.liushuo.ddautotracker.adapter.CategoryAdapter;
+import com.example.liushuo.ddautotracker.databinding.ActivityMainBinding;
 import com.luojilab.AutoTracker;
 import com.luojilab.DataConfigureImp;
 import com.luojilab.base.BaseActivity;
-import com.example.liushuo.ddautopointer.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -5,31 +5,31 @@ package com.luojilab.utils;
  */
 
 public class AutoTrackerSwitch {
-    private static AutoTrackerSwitch mAutoPointerSwitch;
+    private static AutoTrackerSwitch mAutoTrackSwitch;
 
     public static AutoTrackerSwitch getInstance() {
-        if (mAutoPointerSwitch == null) {
+        if (mAutoTrackSwitch == null) {
             synchronized (AutoTrackerSwitch.class) {
-                if (mAutoPointerSwitch == null) {
-                    mAutoPointerSwitch = new AutoTrackerSwitch();
+                if (mAutoTrackSwitch == null) {
+                    mAutoTrackSwitch = new AutoTrackerSwitch();
                 }
             }
         }
 
-        return mAutoPointerSwitch;
+        return mAutoTrackSwitch;
     }
 
-    // 默认关闭自动打点配置，除非打点框架主动调用 enableAutoPoint
-    private boolean mAutoPointEnable = false;
+    // 默认关闭自动打点配置，除非打点框架主动调用 enableAutoTrack
+    private boolean mAutoTrackEnable = false;
 
     private AutoTrackerSwitch() {
     }
 
-    public boolean isAutoPointEnable() {
-        return mAutoPointEnable;
+    public boolean isAutoTrackEnable() {
+        return mAutoTrackEnable;
     }
 
-    public void enableAutoPoint(boolean enable) {
-        mAutoPointEnable = enable;
+    public void enableAutoTrack(boolean enable) {
+        mAutoTrackEnable = enable;
     }
 }

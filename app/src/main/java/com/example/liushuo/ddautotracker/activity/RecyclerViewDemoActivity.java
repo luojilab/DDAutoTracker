@@ -1,7 +1,6 @@
-package com.example.liushuo.ddautopointer.activity;
+package com.example.liushuo.ddautotracker.activity;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.liushuo.ddautopointer.Bean.CategoryBean;
-import com.example.liushuo.ddautopointer.R;
-import com.example.liushuo.ddautopointer.databinding.LayoutListItemBinding;
+import com.example.liushuo.ddautotracker.Bean.CategoryBean;
+import com.example.liushuo.ddautotracker.R;
+import com.example.liushuo.ddautotracker.databinding.LayoutListItemBinding;
 import com.luojilab.base.BaseActivity;
 
 import java.util.ArrayList;

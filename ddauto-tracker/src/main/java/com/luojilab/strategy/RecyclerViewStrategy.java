@@ -41,8 +41,8 @@ public class RecyclerViewStrategy extends DataStrategy {
             DDLogger.e(TAG, "this RecyclerView does not support auto point action!!!");
             return null;
         }
-        DDRecyclerAdapter autoPointAdapter = (DDRecyclerAdapter) adapter;
-        Object data = autoPointAdapter.getItem(adapterPos);
+        DDRecyclerAdapter autoTrackAdapter = (DDRecyclerAdapter) adapter;
+        Object data = autoTrackAdapter.getItem(adapterPos);
 
         return data;
     }

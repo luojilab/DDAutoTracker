@@ -20,13 +20,13 @@ public class AutoTrackHelper {
      * @param context
      * @param view
      */
-    public static void ignoreAutoPoint(@NonNull Context context, @NonNull View view) {
+    public static void ignoreAutoTrack(@NonNull Context context, @NonNull View view) {
         Preconditions.checkNotNull(context);
         Preconditions.checkNotNull(view);
 
         if (context instanceof DataConfigureImp) {
             DataConfigureImp dci = (DataConfigureImp) context;
-            dci.ignoreAutoPoint(view);
+            dci.ignoreAutoTrack(view);
         }
     }
 
@@ -49,7 +49,7 @@ public class AutoTrackHelper {
         return context instanceof DataConfigureImp;
     }
 
-    public static boolean canIgnoreAutoPoint(@Nullable Context context, @Nullable View view) {
+    public static boolean canIgnoreAutoTrack(@Nullable Context context, @Nullable View view) {
         if (context == null || view == null) return false;
 
         return context instanceof DataConfigureImp;

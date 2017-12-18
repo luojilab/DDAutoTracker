@@ -1,9 +1,8 @@
-package com.example.liushuo.ddautopointer.activity;
+package com.example.liushuo.ddautotracker.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.liushuo.ddautopointer.R;
+import com.example.liushuo.ddautotracker.R;
 import com.luojilab.base.BaseActivity;
 
 public class TabDemoActivity extends BaseActivity {

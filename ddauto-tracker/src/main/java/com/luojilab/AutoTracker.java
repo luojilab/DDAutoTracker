@@ -48,7 +48,7 @@ public class AutoTracker {
     private static boolean sDebugPoint = !AutoTracker.isOnlineEnv();
 
     /*自动打点功能是否启用,全局有效,默认值为false(小部分用户测试稳定性)*/
-    private static boolean sEnableAutoPoint = false;
+    private static boolean sEnableAutoTrack = false;
 
     private AutoTracker() {
     }
@@ -80,14 +80,14 @@ public class AutoTracker {
         return sServerEnv;
     }
 
-    public static boolean isAutoPointEnable() {
-        return sEnableAutoPoint;
+    public static boolean isAutoTrackEnable() {
+        return sEnableAutoTrack;
     }
 
-    public static void enableAutoPoint(boolean enable) {
-        sEnableAutoPoint = enable;
+    public static void enableAutoTrack(boolean enable) {
+        sEnableAutoTrack = enable;
 
-        AutoTrackerSwitch.getInstance().enableAutoPoint(enable);
+        AutoTrackerSwitch.getInstance().enableAutoTrack(enable);
     }
 
     public static boolean isDebugPoint() {
@@ -99,7 +99,7 @@ public class AutoTracker {
      *
      * @param enable
      */
-    public static void enableDebugPoint(boolean enable) {
+    public static void enableDebugTrack(boolean enable) {
         sDebugPoint = enable;
     }
 

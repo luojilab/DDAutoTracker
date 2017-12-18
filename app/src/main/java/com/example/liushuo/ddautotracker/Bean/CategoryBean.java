@@ -1,4 +1,4 @@
-package com.example.liushuo.ddautopointer.Bean;
+package com.example.liushuo.ddautotracker.Bean;
 
 /**
  * Created by liushuo on 2017/9/21.

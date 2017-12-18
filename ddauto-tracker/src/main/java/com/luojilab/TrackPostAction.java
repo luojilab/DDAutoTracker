@@ -7,7 +7,7 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 
-import com.luojilab.ddauto_pointer.R;
+import com.luojilab.ddautotracker.R;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
 import com.luojilab.bean.TrackData;
@@ -79,9 +79,9 @@ public class TrackPostAction implements Runnable, Callback<JsonObject> {
         postNLog(eventKey, eventValue);
     }
 
-    public static void manualPostPoint(@NonNull View actionTarget, @Nullable Object data) {
+    public static void manualPostTrack(@NonNull View actionTarget, @Nullable Object data) {
         Preconditions.checkNotNull(actionTarget);
-        if(AutoTracker.isAutoPointEnable()) {
+        if(AutoTracker.isAutoTrackEnable()) {
             TrackerExecutor.getHandler().post(create(actionTarget, data));
         }
     }

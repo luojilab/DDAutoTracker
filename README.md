@@ -21,17 +21,17 @@ D.RecyclerView
 请在开发过程中，尽量使用支持自动打点的控件，如果使用的控件暂不支持自动打点，请联系作者(刘硕)。
 
 ## 不支持自动打点控件的解决方案
-对于自定义ViewGroup 等不支持自动打点的情况，打点框架提供绑定数据的操作。使用者可以在BaseActivity子类中通过方法configLayout将view和数据绑定，绑定之后该View下的任意子View的点击事件的埋点数据都会指向这条数据。对于在非Activity中实现打点数据绑定，可以调用AutoPointHelper 中相应的方法,调用之前最好调用canxxxxx()进行绑定操作是否允许的检查。
+对于自定义ViewGroup 等不支持自动打点的情况，打点框架提供绑定数据的操作。使用者可以在BaseActivity子类中通过方法configLayout将view和数据绑定，绑定之后该View下的任意子View的点击事件的埋点数据都会指向这条数据。对于在非Activity中实现打点数据绑定，可以调用AutoTrackHelper 中相应的方法,调用之前最好调用canxxxxx()进行绑定操作是否允许的检查。
 
-对于某些需要手动发送埋点，但是同样需要走埋点框架的情况，可以调用PointPostAction.manualPostPoint(View,Object)，调用该方法后，会直接发送埋点，但是埋点数据的解析会走自动打点的数据配置逻辑。注意：需要调用ignoreAotoPoint、canIgnoreAutoPoint 忽略自动打点对指定控件的支持。
+对于某些需要手动发送埋点，但是同样需要走埋点框架的情况，可以调用PointPostAction.manualPostPoint(View,Object)，调用该方法后，会直接发送埋点，但是埋点数据的解析会走自动打点的数据配置逻辑。注意：需要调用ignoreAutoTrack、canIgnoreAutoTrack 忽略自动打点对指定控件的支持。
 
 对于完全手动打点的情况（不走埋点配置平台），使用者只需要直接调用 PointPostAction.postNlog()。
 
 ## 关联数据注意
 对于打点框架支持的控件，底层会通过DataStrategy获取点击操作对应的数据。对于自定义ViewGroup 等不支持自动打点的情况，可以通过
 BaseActivity.configLayoutData (id 和数据的对应关系)
-AutoPointHelper.configLayoutData (id 和数据的对应关系)
-AutoPointHelper.ignoreLayoutData
+AutoTrackHelper.configLayoutData (id 和数据的对应关系)
+AutoTrackHelper.ignoreLayoutData
 或实现DataAdapter 配置view绑定的数据 (View 实例和数据的对应关系,特别适用于用自定义ViewGroup,通过addView实现list效果的写法)，那么该View下的任意子View点击操作打点日志绑定的数据都是该数据。
 
 ## 关于布局文件

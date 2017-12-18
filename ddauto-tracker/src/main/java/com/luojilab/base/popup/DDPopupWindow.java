@@ -49,10 +49,10 @@ public class DDPopupWindow extends PopupWindow implements DataConfigureImp {
     }
 
     @Override
-    public void ignoreAutoPoint(@NonNull View view) {
+    public void ignoreAutoTrack(@NonNull View view) {
         Preconditions.checkNotNull(view);
 
-        mDataConfigure.ignoreAutoPoint(view);
+        mDataConfigure.ignoreAutoTrack(view);
     }
 
 }

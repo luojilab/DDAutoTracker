@@ -6,7 +6,7 @@
                                                  android:layout_width="match_parent"
                                                  android:layout_height="match_parent"
                                                  android:fitsSystemWindows="true"
-                                                 tools:context="com.example.liushuo.ddautopointer.activity.TabDemoActivity">
+                                                 tools:context="com.example.liushuo.ddautotracker.activity.TabDemoActivity">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabL"

@@ -86,7 +86,7 @@ public class WindowCallbackWrapper extends SimpleWindowCallback implements DataC
     }
 
     @Override
-    public void ignoreAutoPoint(@NonNull View view) {
+    public void ignoreAutoTrack(@NonNull View view) {
         Preconditions.checkNotNull(view);
 
         int viewHashCode = view.hashCode();
@@ -95,7 +95,7 @@ public class WindowCallbackWrapper extends SimpleWindowCallback implements DataC
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (!AutoTracker.isAutoPointEnable()) {
+        if (!AutoTracker.isAutoTrackEnable()) {
             return super.dispatchTouchEvent(ev);
         }
 

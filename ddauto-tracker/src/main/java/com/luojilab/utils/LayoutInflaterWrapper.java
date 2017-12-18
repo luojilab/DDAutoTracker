@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.common.base.Preconditions;
-import com.luojilab.ddauto_pointer.R;
+import com.luojilab.ddautotracker.R;
 
 import org.xmlpull.v1.XmlPullParser;
 
@@ -29,7 +29,7 @@ public class LayoutInflaterWrapper extends LayoutInflater {
     public static LayoutInflater from(@NonNull Context context) {
         Preconditions.checkNotNull(context);
 
-        if (!AutoTrackerSwitch.getInstance().isAutoPointEnable()) {
+        if (!AutoTrackerSwitch.getInstance().isAutoTrackEnable()) {
             return LayoutInflater.from(context);
         }
 
@@ -44,7 +44,7 @@ public class LayoutInflaterWrapper extends LayoutInflater {
 
         Context context = view.getContext();
 
-        if (!AutoTrackerSwitch.getInstance().isAutoPointEnable()) {
+        if (!AutoTrackerSwitch.getInstance().isAutoTrackEnable()) {
             return LayoutInflater.from(context);
         }
 
@@ -58,7 +58,7 @@ public class LayoutInflaterWrapper extends LayoutInflater {
     public static LayoutInflater wrapInflater(@NonNull LayoutInflater inflater) {
         Preconditions.checkNotNull(inflater);
 
-        if (!AutoTrackerSwitch.getInstance().isAutoPointEnable()) {
+        if (!AutoTrackerSwitch.getInstance().isAutoTrackEnable()) {
             return inflater;
         }
 
@@ -72,7 +72,7 @@ public class LayoutInflaterWrapper extends LayoutInflater {
      * @return 如果自动打点被禁用，使用系统LayoutInflater
      */
     public static View inflate(Context context, @LayoutRes int resource, ViewGroup root) {
-        if (!AutoTrackerSwitch.getInstance().isAutoPointEnable()) {
+        if (!AutoTrackerSwitch.getInstance().isAutoTrackEnable()) {
             return View.inflate(context, resource, root);
         }
 
@@ -81,7 +81,7 @@ public class LayoutInflaterWrapper extends LayoutInflater {
     }
 
     public static View inflate(Context context, @LayoutRes int resource, ViewGroup root, boolean attachToRoot) {
-        if (!AutoTrackerSwitch.getInstance().isAutoPointEnable()) {
+        if (!AutoTrackerSwitch.getInstance().isAutoTrackEnable()) {
             root = attachToRoot ? root : null;
             return View.inflate(context, resource, root);
         }

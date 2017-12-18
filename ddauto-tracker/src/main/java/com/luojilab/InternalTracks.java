@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class InternalTracks {
     /*自动打点异常,data key = exception*/
-    public static final String AutoPointerError = "android_auto_pointer_error";
+    public static final String AutoTrackerError = "android_auto_pointer_error";
 
     /*推送异常,data key = exception*/
     public static final String PushError = "android_push_error";

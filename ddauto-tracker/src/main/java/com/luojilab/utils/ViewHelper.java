@@ -100,7 +100,7 @@ public class ViewHelper {
         sHasLog = true;
 
         Object desc = String.format("cannot get %s child", param);
-        String event = InternalTracks.AutoPointerError;
+        String event = InternalTracks.AutoTrackerError;
         InternalTracks.logInternalError(event, desc);
     }
 

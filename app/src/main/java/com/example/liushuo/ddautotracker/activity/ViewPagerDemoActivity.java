@@ -1,9 +1,7 @@
-package com.example.liushuo.ddautopointer.activity;
+package com.example.liushuo.ddautotracker.activity;
 
 import android.graphics.Color;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.liushuo.ddautopointer.Bean.CategoryBean;
-import com.example.liushuo.ddautopointer.R;
+import com.example.liushuo.ddautotracker.R;
 import com.luojilab.base.BaseActivity;
 import com.luojilab.widget.adapter.DDPagerAdapter;
 

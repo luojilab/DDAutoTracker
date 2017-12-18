@@ -1,15 +1,14 @@
-package com.example.liushuo.ddautopointer.activity;
+package com.example.liushuo.ddautotracker.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.example.liushuo.ddautopointer.Bean.CategoryBean;
-import com.example.liushuo.ddautopointer.R;
-import com.example.liushuo.ddautopointer.adapter.CategoryAdapter;
+import com.example.liushuo.ddautotracker.Bean.CategoryBean;
+import com.example.liushuo.ddautotracker.R;
+import com.example.liushuo.ddautotracker.adapter.CategoryAdapter;
 import com.luojilab.base.BaseActivity;
 
 import java.util.ArrayList;

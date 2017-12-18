@@ -1,4 +1,4 @@
-package com.example.liushuo.ddautopointer;
+package com.example.liushuo.ddautotracker;
 
 import android.app.Application;
 
@@ -20,7 +20,7 @@ public class DemoApp extends Application {
                 .appContext(getApplicationContext())
                 .serverEnvironment("测试");
 
-        AutoTracker.enableAutoPoint(true);
-        AutoTracker.enableDebugPoint(true);
+        AutoTracker.enableAutoTrack(true);
+        AutoTracker.enableDebugTrack(true);
     }
 }

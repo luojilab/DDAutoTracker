@@ -29,17 +29,17 @@ public abstract class BaseActivity extends AppCompatActivity implements DataConf
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //配置自动打点
-        wrapOriginalCallbackForAutoPoint();
+        wrapOriginalCallbackForAutoTrack();
     }
 
-    protected void wrapOriginalCallbackForAutoPoint() {
+    protected void wrapOriginalCallbackForAutoTrack() {
         mDataConfigure = AutoTracker.wrapWindowCallback(this);
     }
 
     @Override
     public void setSupportActionBar(@Nullable Toolbar toolbar) {
         super.setSupportActionBar(toolbar);
-        wrapOriginalCallbackForAutoPoint();
+        wrapOriginalCallbackForAutoTrack();
     }
 
     @Override
@@ -65,10 +65,10 @@ public abstract class BaseActivity extends AppCompatActivity implements DataConf
     }
 
     @Override
-    public void ignoreAutoPoint(@NonNull View view) {
+    public void ignoreAutoTrack(@NonNull View view) {
         Preconditions.checkNotNull(view);
 
-        mDataConfigure.ignoreAutoPoint(view);
+        mDataConfigure.ignoreAutoTrack(view);
     }
 
     /**

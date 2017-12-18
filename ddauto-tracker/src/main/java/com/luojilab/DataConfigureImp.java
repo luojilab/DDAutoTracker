@@ -24,5 +24,5 @@ public interface DataConfigureImp {
      *
      * @param view
      */
-    void ignoreAutoPoint(@NonNull View view);
+    void ignoreAutoTrack(@NonNull View view);
 }
