@@ -29,7 +29,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':ddauto-pointer')
-    compile project(':ddpointable-widget')
+    compile project(':ddauto-tracker')
+    compile project(':ddtrackable-widget')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

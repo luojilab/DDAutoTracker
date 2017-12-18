@@ -2,8 +2,8 @@ package com.example.liushuo.ddautopointer;
 
 import android.app.Application;
 
-import com.luojilab.AutoPointer;
-import com.luojilab.init.AutoPointerInitializer;
+import com.luojilab.AutoTracker;
+import com.luojilab.init.AutoTrackerInitializer;
 
 /**
  * Created by liushuo on 2017/9/22.
@@ -16,11 +16,11 @@ public class DemoApp extends Application {
         super.onCreate();
 
 
-        AutoPointerInitializer.getInstance()
+        AutoTrackerInitializer.getInstance()
                 .appContext(getApplicationContext())
                 .serverEnvironment("测试");
 
-        AutoPointer.enableAutoPoint(true);
-        AutoPointer.enableDebugPoint(true);
+        AutoTracker.enableAutoPoint(true);
+        AutoTracker.enableDebugPoint(true);
     }
 }

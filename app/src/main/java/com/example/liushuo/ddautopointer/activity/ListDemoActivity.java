@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.example.liushuo.ddautopointer.Bean.CategoryBean;
 import com.example.liushuo.ddautopointer.R;
 import com.example.liushuo.ddautopointer.adapter.CategoryAdapter;
-import com.luojilab.AutoPointer;
+import com.luojilab.AutoTracker;
 import com.luojilab.DataConfigureImp;
 import com.luojilab.base.BaseActivity;
 import com.example.liushuo.ddautopointer.databinding.ActivityMainBinding;
@@ -27,11 +27,11 @@ import java.util.Map;
 public class ListDemoActivity extends BaseActivity {
 
     Object[][] data = {
-            {2, "GridView Demo", "describe how to use AutoPointer in GridView"},
-            {3, "RecyclerView Demo", "describe how to use AutoPointer in RecyclerView"},
-            {4, "ViewPager Demo", "describe how to use AutoPointer in ViewPager"},
-            {5, "Dialog Demo", "describe how to use AutoPointer in Dialog"},
-            {6, "tab layout", "describe how to use AutoPointer in TabLayout"}
+            {2, "GridView Demo", "describe how to use AutoTracker in GridView"},
+            {3, "RecyclerView Demo", "describe how to use AutoTracker in RecyclerView"},
+            {4, "ViewPager Demo", "describe how to use AutoTracker in ViewPager"},
+            {5, "Dialog Demo", "describe how to use AutoTracker in Dialog"},
+            {6, "tab layout", "describe how to use AutoTracker in TabLayout"}
     };
 
     private List<CategoryBean> mData = new ArrayList<>();
@@ -105,7 +105,7 @@ public class ListDemoActivity extends BaseActivity {
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
 
-                        DataConfigureImp imp = AutoPointer.wrapWindowCallback(alertDialog);
+                        DataConfigureImp imp = AutoTracker.wrapWindowCallback(alertDialog);
 
                         Map<String, String> data = new HashMap<>();
                         data.put("item", "点击我，查看Dialog中自动打点使用");
