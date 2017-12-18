@@ -43,8 +43,13 @@ AutoPointHelper.ignoreLayoutData
 ## 关于埋点配置
 主项目assets目录下需要放置da.cfg配置文件，这个文件与从服务器下载的配置文件相同，作为默认埋点配置。
 
-##开发规范的检查已经通过lint项目保证
+## 开发规范的检查已经通过lint项目保证
 
-    
-    
-# DDAutoPointer
+## License
+
+  Copyright 2017  luoJiSiWei
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
