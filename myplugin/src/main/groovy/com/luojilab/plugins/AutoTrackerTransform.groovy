@@ -10,8 +10,6 @@ import com.android.build.api.transform.TransformInput
 import com.android.build.api.transform.TransformInvocation
 import com.android.build.api.transform.TransformOutputProvider
 import com.android.build.gradle.internal.pipeline.TransformManager
-import javassist.CtClass
-import javassist.CtMethod
 import org.apache.commons.codec.digest.DigestUtils
 import org.apache.commons.io.FileUtils
 import org.gradle.api.Project
@@ -70,22 +68,7 @@ public class AutoTrackerTransform extends Transform {
     }
 
     //收集完毕程序中所有自定义子类对应关系,插入代码
-    String dataStrategyConfigurationClassName = "com.luojilab.strategy.DataStrategyConfiguration"
-    CtClass dataStrategyConfigurationClass = AppClassAnalyseEngine.sClassPool.get(dataStrategyConfigurationClassName)
-    Map<String,  Set<String>> subClassMap = AppClassAnalyseEngine.sAnalyseEngine.getSubClassMap();
-    Set<Map.Entry<String,  Set<String>>> sets = subClassMap.entrySet();
-    Iterator<Map.Entry<String,  Set<String>>> itr = sets.iterator();
-    while (itr.hasNext()) {
-      Map.Entry<String,  Set<String>> entry = itr.next()
-      String key = entry.getKey()
-      String value = entry.getValue()
-
-      println("遍历分析结果：" + value)
-
-//      CtMethod ctMethod = dataStrategyConfigurationClass.getDeclaredMethod("configureDataStrategies")
-//      ctMethod.insertAfter("")
-    }
-
+    DataStrategyInjecter.inject()
   }
 
   /**
