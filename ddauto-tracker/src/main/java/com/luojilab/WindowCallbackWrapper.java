@@ -11,12 +11,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 
 import com.google.common.base.Preconditions;
-import com.luojilab.strategy.AdapterViewStrategy;
+
 import com.luojilab.strategy.DataStrategy;
-import com.luojilab.strategy.ExpandableListViewStrategy;
-import com.luojilab.strategy.RecyclerViewStrategy;
-import com.luojilab.strategy.TabLayoutStrategy;
-import com.luojilab.strategy.ViewPagerStrategy;
+import com.luojilab.strategy.DataStrategyConfiguration;
 import com.luojilab.utils.DDLogger;
 import com.luojilab.utils.ViewHelper;
 import com.luojilab.view.DataAdapter;
@@ -37,39 +34,6 @@ public class WindowCallbackWrapper extends SimpleWindowCallback implements DataC
     public static final String TAG = AutoTracker.TAG;
 
     private WeakReference<View> mViewRef;
-
-    private static Map<String, DataStrategy> mStrategies = new HashMap<>();
-
-    static {
-        //configure RecyclerView and subclass's search strategy
-        DataStrategy recyclerViewStrategy = new RecyclerViewStrategy();
-        mStrategies.put("RecyclerView", recyclerViewStrategy);
-        mStrategies.put("DDCollectionView", recyclerViewStrategy);
-
-        //ExpandableListView
-        DataStrategy EListViewStrategy = new ExpandableListViewStrategy();
-        mStrategies.put("ExpandableListView", EListViewStrategy);
-        mStrategies.put("DDExpandableListView", EListViewStrategy);
-
-        DataStrategy adapterViewStrategy = new AdapterViewStrategy();
-        //ListView
-        mStrategies.put("ListView", adapterViewStrategy);
-        mStrategies.put("DDListView", adapterViewStrategy);
-        mStrategies.put("ListViewCompat", adapterViewStrategy);
-
-        //GridView
-        mStrategies.put("GridView", adapterViewStrategy);
-        mStrategies.put("DDGridView", adapterViewStrategy);
-
-        //ViewPager
-        DataStrategy viewPagerStrategy = new ViewPagerStrategy();
-        mStrategies.put("ViewPager", viewPagerStrategy);
-
-        //TabLayout
-        DataStrategy tabLayoutStrategy = new TabLayoutStrategy();
-        mStrategies.put("TabLayout", tabLayoutStrategy);
-
-    }
 
     private Map<Integer, Object> mDataLayout = new HashMap<>();
 
@@ -120,10 +84,6 @@ public class WindowCallbackWrapper extends SimpleWindowCallback implements DataC
     /**
      * 配制自定义布局的数据绑定关系，自定义布局内的任何
      * 控件发生点击行为时，发送的埋点都会携带改数据
-     *
-     * @param id
-     * @param object
-     * @return
      */
     @NonNull
     @Override
@@ -220,10 +180,10 @@ public class WindowCallbackWrapper extends SimpleWindowCallback implements DataC
             }
 
             String clsName = touchTarget.getClass().getSimpleName();
-            if (mStrategies.containsKey(clsName)) {
+            if (DataStrategyConfiguration.hasDataStrategy(clsName)) {
 
                 strategyView = touchTarget;
-                strategy = mStrategies.get(clsName);
+                strategy = DataStrategyConfiguration.getDataStrategy(clsName);
 
                 //互斥操作
                 if (configDataView != null) {
