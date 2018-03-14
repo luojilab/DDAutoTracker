@@ -5,15 +5,15 @@ buildscript {
     repositories {
         jcenter()
 
-        maven {
-            url uri('/Users/liushuo/androidStudioProjects/localMaven/repo')
-        }
+//        maven {
+//            url uri('/Users/liushuo/androidStudioProjects/localMaven/repo')
+//        }
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
 
-        classpath 'com.demo.plugins:myplugin:1.+'
+//        classpath 'com.demo.plugins:myplugin:1.+'
     }
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files

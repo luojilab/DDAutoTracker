@@ -13,7 +13,7 @@ import android.view.Window;
 import com.google.common.base.Preconditions;
 
 import com.luojilab.strategy.DataStrategy;
-import com.luojilab.strategy.DataStrategyConfiguration;
+import com.luojilab.strategy.DataStrategyResolver;
 import com.luojilab.utils.DDLogger;
 import com.luojilab.utils.ViewHelper;
 import com.luojilab.view.DataAdapter;
@@ -178,12 +178,12 @@ public class WindowCallbackWrapper extends SimpleWindowCallback implements DataC
                     configId = -1;
                 }
             }
-
-            String clsName = touchTarget.getClass().getSimpleName();
-            if (DataStrategyConfiguration.hasDataStrategy(clsName)) {
+    
+            DataStrategy tmpStrategy = DataStrategyResolver.resolveDataStrategy(touchTarget);
+            if (tmpStrategy != null) {
 
                 strategyView = touchTarget;
-                strategy = DataStrategyConfiguration.getDataStrategy(clsName);
+                strategy = tmpStrategy;
 
                 //互斥操作
                 if (configDataView != null) {
