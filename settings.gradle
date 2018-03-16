@@ -1,1 +1,1 @@
-include ':app', ':ddauto-tracker', ':ddtrackable-widget',':myplugin'
+include ':app', ':ddauto-tracker', ':ddtrackable-widget', ':autotracker-plugin'

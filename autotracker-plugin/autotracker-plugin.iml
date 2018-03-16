@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":myplugin" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":autotracker-plugin" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":myplugin" />
+        <option name="GRADLE_PROJECT_PATH" value=":autotracker-plugin" />
       </configuration>
     </facet>
     <facet type="java-gradle" name="Java-Gradle">
@@ -100,13 +100,5 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="gradle-api-4.1" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="groovy-all-2.4.11" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="gradle-installation-beacon-4.1" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
-    <orderEntry type="library" exported="" name="myplugin.myplugin-1.0.80" level="project" />
   </component>
 </module>
